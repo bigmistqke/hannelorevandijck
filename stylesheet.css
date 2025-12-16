@@ -1,0 +1,365 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-size: 10pt;
+    color: #090909;
+    background-color: #fbfbfb;
+}
+
+.cover{
+	height: 100vh !important;
+	max-height: 100vh !important;
+	object-fit: cover;
+	max-width: 100% !important;
+	width: 100%;
+}
+
+#gallery{
+	position:absolute;
+	z-index:0;
+	line-height:12pt;
+	font-size:10pt;
+	bottom:5px;
+	left:5px;
+	color:blue;
+	cursor: pointer;
+
+}
+
+
+
+@media only screen and (max-width: 700px) {
+
+
+	.left {
+		text-align:center;
+	/*    padding-right: 1.25vh;
+	*/}
+
+	.right {
+		text-align:center;
+	/*    padding-left: 1.25vh;
+	*/
+	}
+
+	.centerLeft > .caption{
+		text-align: center;
+	}
+
+	.centerRight > .caption{
+		text-align: center;
+	}
+
+
+
+	
+	.centerRight > img{
+		width:100% !important;
+		margin-left:0px !important;
+	}
+	.centerLeft > img{
+		width:100% !important;
+		margin-right:0px !important;
+	}
+	.l{
+		max-width: 100% !important;
+		width: 100%;
+		height: auto !important;
+		max-height: 1000vh !important;
+	}
+/*	.addRow{
+		height:10vh;
+	}*/
+
+	.addRow{
+		height: 0vh;
+	}
+	.cell:not(:last-child){
+		padding-bottom: 0vh;
+		padding-right: 0px;
+
+	}
+
+	.cell{
+		display:block;
+	}
+	.m, .s, .xs, .l, .xl{
+		width:100%;
+		margin-left:0px;
+
+	}
+	.diTri{
+		display : none !important;
+	}
+
+	
+}
+
+
+
+
+
+@media only screen and (min-width:700px) {
+	.noDiTri{
+		display : none !important;
+	}
+
+	.left {
+		text-align:left;
+	/*    padding-right: 1.25vh;
+	*/}
+
+	.right {
+		text-align:right;
+	/*    padding-left: 1.25vh;
+	*/
+	}
+
+	.centerLeft > .caption{
+		margin-right: 50%;
+		text-align: right;
+	}
+
+	.centerRight > .caption{
+		margin-left: 50% !important;
+		text-align: left;
+	}
+
+	.caption{
+		margin-bottom: -100%;
+	}
+	.addRow{
+		height: 50vh;
+	}
+	.cell:not(:last-child) {
+		padding-right: 2px;
+
+	}
+	.centerLeft{
+		text-align:right;
+	}
+	.centerRight > img{
+		margin-left: 50% !important;
+		max-width: 50% !important;
+	}
+	.centerLeft > img{
+		margin-right: 50% ;
+		text-align: right;
+		max-width: 50% ;
+	}
+
+	.m[class~="portrait"]{
+		max-height: calc(100vh / 5 * 4);
+		width: auto;
+
+	}
+	.m[class~="landscape"]{
+		width: calc(100vh / 5 * 4);
+		height: auto;
+
+	}
+	.s[class~="portrait"]{
+		max-height: calc(100vh / 5 * 4 / 3 * 2);
+		width:auto;
+	}
+	.s[class~="landscape"]{
+		width: calc(100vh / 5 * 4 / 3 * 2);
+		height: auto;
+	}
+	.xs[class~="portrait"]{
+		max-height: calc(100vh / 5 * 4 / 3);
+		width:auto;
+
+	}
+	.xs[class~="landscape"]{
+		width: calc(100vh / 5 * 4 / 3);
+		height: auto;
+
+	}
+
+	.diTri{
+		width: 100%;
+		position:relative;
+	}
+	.diTri div{
+		position:absolute;
+		width: 100%;
+		text-align: center;
+		padding:5pt;
+	}
+
+	.cell {
+		display:table-cell;
+		min-width: 50%;
+	}
+
+	.cell:last-child {
+		padding-left: 2px;
+	}
+	.cell:first-child {
+		padding-left: 0px !important;
+	}
+
+/*	body{
+		background:blue;
+	}
+	.cell{
+		display:block !important;
+	}
+	.cell:not(:last-child){
+		padding-bottom: 10vh;
+	}
+	.centerRight > img{
+		width:100% !important;
+		margin-left:0px !important;
+	}*/
+	.l{
+		max-width: 50% !important;
+		width: 50%;
+		height: auto !important;
+		max-height: 1000vh !important;
+	}
+
+}
+
+#load{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#archive{
+	height: 100vh;
+	width: 100%;
+	z-index:1;
+	overflow: auto;
+	overflow-x: hidden;
+	display: none;
+
+
+}
+
+
+.center {
+    text-align: center;
+
+
+}
+
+
+
+
+img {
+    cursor: pointer;
+    height: auto;
+    max-width: 100%;
+    transform: translateZ(0);
+}
+
+
+.row {
+	justify-content: space-between;
+    width: 100%;
+    display: table;
+}
+
+
+#GUI{
+
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100px;
+	background: white;
+	padding: 10px;
+	z-index: 5;
+}
+#scale {
+	width: 100%;
+	margin:0px;
+}
+#save{
+	width:100%;
+}
+
+#rowGUI{
+	position:fixed;
+	display:none;
+	font-family:arial;
+	background:white;
+
+}
+
+#imgGUI{
+	position:fixed;
+	display:none;
+	font-family:arial;
+	background:white;
+
+}
+#imgGUI  button{
+	width:calc(50% - 5px);
+	display:inline;
+	text-align:justify;
+}
+#imgGUI, a{
+	padding-left: 1px;
+}
+
+
+.openImg{
+	color: blue;
+}
+#contact a:hover{
+	text-decoration: underline;
+}
+#contact a{
+	color:black;
+	font-style: normal !important;
+	text-decoration: none;
+
+}
+#contact{
+	display:none;
+	text-align: center;
+	width:100%;
+	padding-bottom: 5px;
+}
+#archive a:first-child{
+	font-style: oblique;
+}
+.openImg{
+	text-decoration: none !important;
+	margin-left: 5pt;
+}
+
+#grayscale{
+	width:50px;
+}
+
+
+.xl{
+	max-width: 100% !important;
+	width: 100%;
+	height: auto !important;
+	max-height: 1000vh !important;
+	text-align: center !important;
+}
+
+.noBreaks > .addRow{
+	height: 0px !important;
+}
+
+
+.caption{
+	font-size: 10pt;
+/*	line-height: 12pt;
+*/	padding:5pt;
+	display: none;
+}
+.noBreaks > .row > .cell > .caption{
+	margin-bottom: 0pt;
+}
